@@ -6,3 +6,4 @@ data_model.py
 **/lib
 **/bin
 **/__pycache__
+**/lib64
