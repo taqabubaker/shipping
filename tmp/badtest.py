@@ -11,10 +11,10 @@ class TestEndpoints(unittest.TestCase):
         data = json.loads(response.data)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(data[name], 'shipping')
-        self.assertEqual(data[version], '1.0')
         self.assertEqual(data[owners], ['ameerabb', 'lonestar'])
         self.assertEqual(data[team], 'genAIs')
-        self.assertEqual(data['organization'], 'acme')
+        self.assertEqual(data[organization], 'acme')
+        self.assertEqual(data[version], '1.0')
 
     def test_liveness(self):
         response = self.app.get('/liveness')
